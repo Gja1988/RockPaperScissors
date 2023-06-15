@@ -44,8 +44,8 @@ function capitalizeFirst(word) {
 function game() {
 
     for (let i = 1; i <= 5; i++) {
-
-        console.log(playRound(`rock`, getComputerChoice()));
+        const playerSelection = prompt(`Select Rock, Paper, Scissors`).toLowerCase();
+        console.log(playRound(playerSelection, getComputerChoice()));
     }
 }
 
