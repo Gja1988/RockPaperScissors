@@ -1,4 +1,21 @@
 //Create a function called getComputerChoice that randomly returns either Paper, Rock, Scissors.
+const rock = document.querySelector('.rock')
+const paper = document.querySelector('.paper');
+const scissors = document.querySelector('.scissors');
+let results = document.querySelector('.results');
+
+rock.addEventListener('click', () => {
+    results.textContent = playRound('rock', getComputerChoice());
+})
+
+paper.addEventListener('click', () => {
+    results.textContent = playRound('paper', getComputerChoice());
+})
+
+scissors.addEventListener('click', () => {
+    results.textContent = playRound('scissors', getComputerChoice());
+})
+
 const choices = [`rock`, `scissors`, `paper`];
 
 function getComputerChoice() {
@@ -40,14 +57,13 @@ function capitalizeFirst(word) {
     return first + word.slice(1);
 }
 
-//Create a function called game()
-function game() {
+// //Create a function called game()
+// function game() {
 
-    for (let i = 1; i <= 5; i++) {
-        const playerSelection = prompt(`Select Rock, Paper, Scissors`).toLowerCase();
-        console.log(playRound(playerSelection, getComputerChoice()));
-    }
-}
+//     for (let i = 1; i <= 5; i++) {
+//         const playerSelection = prompt(`Select Rock, Paper, Scissors`).toLowerCase();
+//         console.log(playRound(playerSelection, getComputerChoice()));
+//     }
+// }
 
-console.log(game());
 
